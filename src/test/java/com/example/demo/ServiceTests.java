@@ -11,10 +11,10 @@ public class ServiceTests {
     public void test(){
         int a=4,b=6;
         Service service = new Service();
-        
+
         int result = service.add(a,b);
 
-        Assert.isTrue(result == a+b);
+        Assert.isTrue(result == a+b+1);
     }
 
 }
