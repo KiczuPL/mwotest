@@ -12,9 +12,9 @@ public class ServiceTests {
         int a=4,b=6;
         Service service = new Service();
 
-        int result = service.add(a,b);
-
-        Assert.isTrue(result == a+b);
+        String result = service.add(a,b);
+        //System.out.println(service.version);
+        Assert.isTrue(result.equals("\n"+(a+b)));
     }
 
 }
