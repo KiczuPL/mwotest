@@ -14,7 +14,7 @@ public class ServiceTests {
 
         int result = service.add(a,b);
 
-        Assert.isTrue(result == a+b+1);
+        Assert.isTrue(result == a+b);
     }
 
 }
