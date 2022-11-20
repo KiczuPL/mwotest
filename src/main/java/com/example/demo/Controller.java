@@ -17,7 +17,7 @@ public class Controller {
     }
 
     @GetMapping("/add")
-    public Integer get(@RequestParam Integer a,@RequestParam Integer b){
+    public String get(@RequestParam Integer a,@RequestParam Integer b){
         return service.add(a,b);
     }
 }
