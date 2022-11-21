@@ -10,6 +10,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class DemoApplication {
 
 	public static void main(String[] args) {
+
+		System.out.println("Version: " + DemoApplication.class.getPackage().getImplementationVersion());
 		SpringApplication.run(DemoApplication.class, args);
 	}
 

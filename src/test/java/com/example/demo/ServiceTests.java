@@ -14,7 +14,8 @@ public class ServiceTests {
 
         String result = service.add(a,b);
         //System.out.println(service.version);
-        Assert.isTrue(result.equals("\n"+(a+b)));
+        Assert.isTrue(result.equals(DemoApplication.class.getPackage().getImplementationVersion() +
+                "\n"+(a+b)));
     }
 
 }
