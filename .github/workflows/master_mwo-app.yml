@@ -42,6 +42,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+     - uses: actions/checkout@v2
      - name: print
        run: ls -la
      - name: Set up Maven
