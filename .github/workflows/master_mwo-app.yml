@@ -47,6 +47,11 @@ jobs:
        uses: actions/setup-java@v1
        with:
           java-version: '17'
+          
+     - name: Configure Git User
+       run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
        
      - name: Change wrapper permissions
        run: chmod +x ./mvnw
