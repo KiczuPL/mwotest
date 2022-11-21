@@ -7,7 +7,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class Service {
 
     public String add(Integer a, Integer b){
-        return "\n"+(a+b);
+        return DemoApplication.class.getPackage().getImplementationVersion() +
+                "\n"+(a+b);
     }
 
 }

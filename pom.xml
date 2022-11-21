@@ -46,4 +46,10 @@
 			</plugin>
 		</plugins>
 	</build>
+	<scm>
+		<url>scm:git:git@github.com:KiczuPL/mwotest.git</url>
+		<connection>scm:git:git@github.com:KiczuPL/mwotest.git</connection>
+		<developerConnection>scm:git:git@github.com:KiczuPL/mwotest.git</developerConnection>
+		<tag>@{project.version}</tag>
+	</scm>
 </project>
