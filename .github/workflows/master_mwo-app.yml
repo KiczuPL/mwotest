@@ -43,6 +43,12 @@ jobs:
     needs: build
     steps:
      - uses: actions/checkout@v2
+     
+     - name: Set up Java version
+       uses: actions/setup-java@v1
+       with:
+          java-version: '17
+
      - name: print
        run: ls -la
 
