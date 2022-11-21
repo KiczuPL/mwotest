@@ -42,10 +42,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Publish JAR
-        run: ./mvnw -B release:prepare release:perform
-        env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     - name: Set up Maven
+       uses: stCarolas/setup-maven@v4.5
+       with:
+         maven-version: 3.8.2
+     - name: Publish JAR
+       run: ./mvnw -B release:prepare release:perform
+       env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
   deploy-dev:
