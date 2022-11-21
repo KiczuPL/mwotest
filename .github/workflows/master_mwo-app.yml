@@ -38,11 +38,22 @@ jobs:
           path: '${{ github.workspace }}/target/*.jar'
           
       
-          
+  release:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+     - name: Configure Git user
+       run: | 
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+     - name: Publish JAR
+       run: ./mvnw -B release:prepare release:perform
+       env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
 
   deploy:
     runs-on: ubuntu-latest
-    needs: build
+    needs: release
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
